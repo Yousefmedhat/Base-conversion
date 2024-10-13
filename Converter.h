@@ -7,9 +7,8 @@ typedef uint16_t u16;
 void show_menu(u16); // show the menu excluding already chosen base
 bool check(string,u16); // checks if the input is matches the chosen base
 string convert(string,u16,u16); // convert the input from one base to another
-string trim_zeros(string);     // trim the leading zeros from start of string
 
-//Checking
+//Checkers
 bool is_decimal(string); // return ture if the number is decimal false othewise
 bool is_binary(string);  // return ture if the number is binary false othewise
 bool is_octal(string);   // return ture if the number is octal false othewise
@@ -24,9 +23,9 @@ string to_hexa(string,u16);    // convert from a base to hexa
 string hexa_char(string); // converts a decimal number to the equivalent hexa character
 
 //Helper
-string to_str(ll);             // converts an decimal number to string
-ll to_int(string);             // converst a string to long long decimal number
+string to_str(ll);             // convert an decimal number to string
+ll to_int(string);             // convert a string to long long decimal number
 string fill_zeros(string,u16); // fill zeros for binary number to match its eqivalent
-// hexa(4 bytes) or octal(3 bytes) representaion
-
-
+string trim_zeros(string);     // trim the leading zeros from the start of string
+//                                hexa(4 bytes) or octal(3 bytes) representaion
+void capitalize(string&);     // return Hexa numbre in capital letters
