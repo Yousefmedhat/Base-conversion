@@ -34,26 +34,26 @@ bool check(string input, u16 type)
     return is_hexa(input);
   }
 }
-string convert(string input, u16 inputnumberal_type, u16 desired_type)
+string convert(string input, u16 input_type, u16 desired_type)
 {
   string desired;
-  if (inputnumberal_type == Hexa)
+  if (input_type == Hexa)
     capitalize(input);
-  if (desired_type >= inputnumberal_type)
+  if (desired_type >= input_type)
     desired_type++;
   switch (desired_type)
   {
   case Decimal:
-    desired = to_decimal(input, inputnumberal_type);
+    desired = to_decimal(input, input_type);
     break;
   case Binary:
-    desired = to_binary(input, inputnumberal_type);
+    desired = to_binary(input, input_type);
     break;
   case Octal:
-    desired = to_octal(input, inputnumberal_type);
+    desired = to_octal(input, input_type);
     break;
   case Hexa:
-    desired = to_hexa(input, inputnumberal_type);
+    desired = to_hexa(input, input_type);
     break;
   }
   return trim_zeros(desired);
